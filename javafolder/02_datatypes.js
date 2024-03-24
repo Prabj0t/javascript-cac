@@ -21,3 +21,5 @@ console.log("Hitesh")
 
 
 // object
+
+console.log(typeof "prabh")
