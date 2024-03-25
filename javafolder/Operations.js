@@ -21,3 +21,9 @@ console.log(null >= 0)
 console.log(undefined == 0)
 console.log(undefined > 0)
 console.log(undefined < 0)
+
+
+// (strict check -> ===) check datatype also 
+
+
+console.log("2" === 2)
