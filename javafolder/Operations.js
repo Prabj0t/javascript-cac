@@ -27,3 +27,64 @@ console.log(undefined < 0)
 
 
 console.log("2" === 2)
+
+
+
+
+
+
+
+
+
+// ================== interview related questions =====================
+
+//  primitive and non primitive (call by value, call by reference)
+
+//  primitive:7 (call by value)  ->   string, number, bolean, null, undefined, symbol , BigInt
+
+
+const score = 100 
+const scoreValue = 100.3
+
+const isLoggedIn = false
+const outsideTemp = null
+
+let useEmail;
+
+
+const id = Symbol("123")
+const anotherId = Symbol("123")
+console.log(id === anotherId);
+const bigNumber = 1345234653456534642n
+
+//  non primitive:3 (call by reference) -> arrays, object, function 
+
+//  dynamically type vs statically -> js is dynamically typed
+
+// id === anotherId => false
+// array, object, function overview 
+// typeof datatyped is available on documentation
+
+
+
+
+// Reference (NoN primitive )
+// Array , object, function
+
+// Array
+const heros = ["shaktiman" , "naagraaj" , "Doga"];
+
+// Object
+let myObj = {
+    name : "Prabhjot",
+    age : 21,
+}
+
+// function
+const myfunction = function(){
+    console.log("Hello function is called");
+}
+
+myfunction();
+
+console.log(typeof anotherId)
