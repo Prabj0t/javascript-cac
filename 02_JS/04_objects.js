@@ -86,11 +86,9 @@ const course = {
 }
 
 // Created an object 'course' representing a course
-
 const {courseInstructor: instructor} = course
 
 // Destructured the 'courseInstructor' property from the 'course' object into a variable 'instructor'
-
 console.log(instructor);
 
 // Logged the value of 'instructor' variable
