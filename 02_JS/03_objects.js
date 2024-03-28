@@ -1,3 +1,7 @@
+// Singleton - constructor se koi bhi object bnega vo singleton bnega
+// Object.create
+
+
 // Define a symbol for unique property keys
 const mySym = Symbol("key1");
 
@@ -41,4 +45,4 @@ JsUser.greeting = function(){
 
 // Call the greeting method and log the return value
 console.log(JsUser.greeting()); // Output: Hello Js Users, anotherNewName
-            
+                                //         undefined
