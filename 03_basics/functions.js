@@ -66,3 +66,48 @@ function loginUserMessage2(username = "sam"){
 
 // Logging the result of calling loginUserMessage2 with no argument to the console
 console.log(loginUserMessage2());
+
+
+ 
+// take more than one values in our parameter using Rest Operator
+function calculateCartPrice(...num1){
+    return num1    
+}
+
+// Logging the result of calling calculateCartPrice with arguments 200, 400, and 100 to the console
+console.log(calculateCartPrice(200, 400, 100));
+
+// Object representing a user
+const user = {
+    username: "Prabh",
+    price: 199
+}
+
+// Function to handle an object and log its properties
+function handleObject(anyobject){
+    // Logging the username and price of the object
+    console.log(`Username is ${anyobject.username} and the price is ${anyobject.price}`);
+}
+
+// Calling handleObject function with user object as argument
+handleObject(user);
+
+// Calling handleObject function with an object as argument
+handleObject({
+    username: "sam",
+    price:399
+});
+
+// Array declaration
+const myNewArray = [200 , 100, 599 , 344];
+
+// Function to return the second value of an array
+function returnSecondValue(getArray){
+    // Returning the second element of the array
+    return getArray[1];
+}
+
+// Logging the second value of myNewArray
+console.log(returnSecondValue(myNewArray));
+// Logging the second value of a new array directly
+console.log(returnSecondValue([60 , 3, 2, 24]));
