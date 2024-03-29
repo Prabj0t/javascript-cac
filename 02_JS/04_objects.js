@@ -93,6 +93,8 @@ console.log(instructor);
 
 // Logged the value of 'instructor' variable
 
+
+// API in the form of Array 
 [
     {},
     {},
