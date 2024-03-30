@@ -25,12 +25,12 @@ user.welcomeMessage();
 console.log(this);
 
 // Function declaration using the function keyword
-function chai(){
-    // Variable declaration
-    let username = "hitesh"
-    // Logging the value of 'this.username'
-    console.log(this.username);
-}
+// function chai(){
+//     // Variable declaration
+//     let username = "hitesh"
+//     // Logging the value of 'this.username'
+//     console.log(this.username);
+// }
 
 // Uncommenting the following line would result in an error because 'this.username' is undefined
 // chai();
@@ -55,8 +55,6 @@ const addTwo = (num1, num2) => {
 
 // Arrow function to add two numbers without curly braces (implicit return)
 // const addTwo = (num1, num2) =>  num1 + num2;
-
-// Arrow function to add two numbers with parentheses around the expression (explicit return)
 // const addTwo = (num1, num2) => ( num1 + num2 );
 
 // Arrow function to return an object
@@ -69,4 +67,4 @@ console.log(addTwo(3, 4));
 const myArray = [2, 5, 3, 7, 8];
 
 // Using forEach method on the array (missing callback function)
-myArray.forEach();
+// myArray.forEach();
