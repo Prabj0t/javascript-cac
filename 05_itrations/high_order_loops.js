@@ -39,7 +39,7 @@ const myObject = {
     game2: 'Spiderman'
 }
 
-// This will give errors because objects are not iterable 
+// This will give errors because objects are not iterable with for of
 for (const [key, value] of myObject) {
     console.log(key, ':-', value);
 }
