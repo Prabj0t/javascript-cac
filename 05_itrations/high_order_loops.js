@@ -1,5 +1,3 @@
-
-
 // ["", "", ""] // array 
 // [{}, {}, {}] // objects in array
 
@@ -16,11 +14,32 @@ for (const num of arr) {
 // Iterate through characters of a string using for...of loop
 const greetings = "Hello world!";
 for (const greet of greetings) {
-    console.log(`Each char is ${greet}`)
+    console.log(`Each char is ${greet}`);
 }
+
 
 // Maps
 
-const map = new Map()
+// Create a Map
+const map = new Map();
+map.set('IN', "India");
+map.set('USA', "United States of America");
+map.set('Fr', "France");
+map.set('IN', "India");  // maps only take unique entries
 
-map.
+
+// Print key-value pairs using for...of loop
+for (const [key, value] of map) {
+    console.log(key, ':-', value);
+}
+
+// Constructing the map 
+const myObject = {
+    game1: 'NFS',
+    game2: 'Spiderman'
+}
+
+// This will give errors because objects are not iterable 
+for (const [key, value] of myObject) {
+    console.log(key, ':-', value);
+}
