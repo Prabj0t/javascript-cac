@@ -9,7 +9,7 @@ const newNums = myNumers
                 .map((num) => num + 1)   // Add 1 to each resulting number
                 .filter((num) => num >= 40); // Filter numbers greater than or equal to 40
 
-console.log(newNums); // Output: [41, 51, 61, 71, 81, 91]
+console.log(newNums);  // Output: [41, 51, 61, 71, 81, 91]
 
 
 
