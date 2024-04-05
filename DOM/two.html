@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        /* Define a CSS class called 'bg-black' */
+        .bg-black {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <!-- Create a parent div element with the class 'parent' -->
+    <div class="parent">
+        <!-- This is a comment -->
+        <!-- Create child div elements with the class 'day' -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    // Select the element with the class 'parent' and assign it to the 'parent' variable
+    const parent = document.querySelector('.parent');
+    console.log(parent); // Log the 'parent' element to the console
+    console.log(parent.children); // Log the child elements of 'parent' to the console
+    console.log(parent.children[1]); // Log the second child element of 'parent' to the console
+    console.log(parent.children[1].innerHTML); // Log the inner HTML content of the second child element of 'parent' to the console
+
+    // Loop through each child element of 'parent' and log its inner HTML content to the console
+    for (let i = 0; i < parent.children.length; i++) {
+        const element = parent.children[i].innerHTML;
+        console.log(element);
+    }
+
+    // Change the color of the second child element of 'parent' to orange
+    parent.children[1].style.color = "orange";
+    
+    console.log("First child of parent:", parent.firstElementChild); // Log the first child element of 'parent' to the console
+    console.log("Last child of parent:", parent.lastElementChild); // Log the last child element of 'parent' to the console
+
+    // Select the first element with the class 'day' and assign it to the 'dayOne' variable
+    const dayOne = document.querySelector('.day');
+    console.log("dayOne is -> ", dayOne); // Log the 'dayOne' element to the console
+    console.log("Parent of dayOne:", dayOne.parentElement); // Log the parent element of 'dayOne' to the console
+    console.log("Next sibling of dayOne:", dayOne.nextElementSibling.innerHTML); // Log the next sibling element of 'dayOne' to the console
+    console.log("All child nodes of parent:", parent.childNodes); // Log all child nodes of 'parent' to the console
+</script>
+</html>
