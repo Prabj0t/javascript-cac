@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // ADD
+    // Function to add a new language to the list using innerHTML (less optimal)
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = langName;
+        document.querySelector('.language').appendChild(li); // Traversing the entire tree to append this at the end which is complex for high numbers of nodes
+    }
+    addLanguage("python"); // Traversing the entire tree to append this at the end which is complex for high numbers of nodes
+    addLanguage("typescript");
+    
+    //optimal way
+    // Function to add a new language to the list using textContent (more optimal)
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("c sharp"); // More optimal way to add a language
+
+    // EDIT
+
+    // Select the second language element
+    const secondlang = document.querySelector("li:nth-child(2)");
+    console.log(secondlang);
+
+    // Replace the second language with "Mojo" using replaceWith method
+    const newli = document.createElement('li');
+    newli.textContent = "Mojo";
+    secondlang.replaceWith(newli);
+
+    // Edit
+    // Select the first language element
+    const firstLang = document.querySelector("li:first-child");
+    console.log("firstLang.outerHTML");
+
+    // Replace the outerHTML of the first language with 'typeScript'
+    firstLang.outerHTML = '<li>typeScript</li>';
+
+    // remove
+    // Select the last language element and remove it from the list
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+</script>
+</html>
