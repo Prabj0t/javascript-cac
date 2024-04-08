@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Define the URL to make a request
+    const requestUrl = 'https://api.github.com/users/Prabj0t';
+
+    // Create a new XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+
+    // Open a GET request to the specified URL
+    xhr.open('GET', requestUrl);
+
+    // Define a function to be called whenever the state of the XMLHttpRequest changes
+    xhr.onreadystatechange = function(){
+        // Log the current state of the XMLHttpRequest
+        console.log(xhr.readyState);
+
+        // Check if the request is completed
+        if(xhr.readyState === 4){
+
+            // Convert the response from a string to an Object using JSON.parse()
+            const data = JSON.parse(this.responseText);
+            
+            // Log the type of data received
+            console.log (typeof data);
+
+            // Log the number of followers
+            console.log(data.followers);
+        }
+    }
+
+    // Send the request
+    xhr.send();
+</script>
+</html>
